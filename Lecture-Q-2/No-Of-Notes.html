@@ -1,16 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+
 </body>
 <script>
-    
+    let amount = prompt("Enter Amout");
 
-    
+    let count100 = 0;
+    let count50 = 0;
+    let count20 = 0;
+    let count10 = 0;
+    let count5 = 0;
+    let count1 = 0;
+
+    if (amount >= 100) {
+        count100 = (amount - (amount % 100)) / 100;
+        amount = amount % 100;
+    }
+
+    if (amount >= 50) {
+        count50 = (amount - (amount % 50)) / 50;
+        amount = amount % 50;
+    }
+
+    if (amount >= 20) {
+        count20 = (amount - (amount % 20)) / 20;
+        amount = amount % 20;
+    }
+
+    if (amount >= 10) {
+        count10 = (amount - (amount % 10)) / 10;
+        amount = amount % 10;
+    }
+
+    if (amount >= 5) {
+        count5 = (amount - (amount % 5)) / 5;
+        amount = amount % 5;
+    }
+    if (amount >= 1) {
+        count1 = (amount - (amount % 1)) / 1;
+    }
+
+    console.log(`100s: ${count100}`);
+    console.log(`50s: ${count50}`);
+    console.log(`20s: ${count20}`);
+    console.log(`10s: ${count10}`);
+    console.log(`5s: ${count5}`);
+    console.log(`1s: ${count1}`);
+
 </script>
+
 </html>
